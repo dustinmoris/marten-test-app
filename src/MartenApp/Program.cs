@@ -44,15 +44,16 @@ await using (var session = store.QuerySession())
 }
 
 // Patch items concurrently
-await Task.WhenAll(items.Select(item => PatchItemAsync(store, item)));
+await Task.WhenAll(items.Select(item => PatchItemAsync(store, item.Id)));
 
 // Say something
 Console.WriteLine("Done!");
 
-async Task PatchItemAsync(IDocumentStore store, Item item)
+async Task PatchItemAsync(IDocumentStore store, Guid itemId)
 {
+    await Task.Delay(100);
     await using var session = store.LightweightSession();
-    session.Patch<Item>(item.Id).Set(x => x.Number, item.Number * 10);
+    session.Patch<Item>(itemId).Set(x => x.Number, 1337);
     await session.SaveChangesAsync();
 }
 
