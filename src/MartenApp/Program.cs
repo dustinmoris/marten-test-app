@@ -44,8 +44,7 @@ await using (var session = store.QuerySession())
 }
 
 // Patch items concurrently
-var tasks = items.Select(item => PatchItemAsync(store, item)).ToList();
-await Task.WhenAll(tasks);
+await Task.WhenAll(items.Select(item => PatchItemAsync(store, item)));
 
 // Say something
 Console.WriteLine("Done!");
