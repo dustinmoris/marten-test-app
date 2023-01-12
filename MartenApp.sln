@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7CED824C-E0D4-4202-93BC-5B2C53583404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartenApp", "src\MartenApp\MartenApp.csproj", "{E07040D7-D28E-4AF9-84F1-219031878BD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_root", "_root", "{9282FFE1-84FC-4635-8C06-3674F5C9B9A0}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E07040D7-D28E-4AF9-84F1-219031878BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07040D7-D28E-4AF9-84F1-219031878BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07040D7-D28E-4AF9-84F1-219031878BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07040D7-D28E-4AF9-84F1-219031878BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E07040D7-D28E-4AF9-84F1-219031878BD6} = {7CED824C-E0D4-4202-93BC-5B2C53583404}
+	EndGlobalSection
+EndGlobal

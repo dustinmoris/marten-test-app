@@ -1,0 +1,14 @@
+services:
+  postgres:
+    container_name: postgres 
+    image: sibedge/postgres-plv8:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user1
+      POSTGRES_PASSWORD: Just4Now
+      POSTGRES_DB: demo_db
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+volumes:
+  pg_data:
